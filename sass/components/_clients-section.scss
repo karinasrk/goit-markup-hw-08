@@ -2,6 +2,11 @@
   @extend %list;
   display: flex;
 
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
   @media screen and (min-width: 480px) {
     flex-wrap: wrap;
     flex-direction: unset;
