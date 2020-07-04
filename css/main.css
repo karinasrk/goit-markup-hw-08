@@ -1045,6 +1045,17 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 479px) {
+  .clients-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .clients-list {
     -ms-flex-wrap: wrap;
