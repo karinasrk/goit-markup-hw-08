@@ -2,11 +2,6 @@
   @extend %list;
   display: flex;
 
-  @media screen and (max-width: 479px) {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-
   @media screen and (min-width: 480px) {
     flex-wrap: wrap;
     flex-direction: unset;
@@ -19,7 +14,6 @@
 }
 
 .clients-list .clients-item {
-  flex-direction: column;
   height: 90px;
   fill: $primary-icons-color;
   border: 1px solid $border-clients-color;

@@ -42,7 +42,11 @@
 
   background-color: $backdrop-bgc-color;
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  // @media screen and (min-width: 480px) and (max-width: 767px) {
+  //   padding: 93px 15px 94px 15px;
+  // }
+
+  @media screen and (max-width: 767px) {
     padding: 93px 15px 94px 15px;
   }
 
@@ -184,7 +188,15 @@
   color: $paragraph-text-color;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  // @media screen and (min-width: 480px) and (max-width: 1199px) {
+  //   font-size: 12px;
+  //   line-height: 1.17;
+  //   max-width: 401px;
+  //   text-align: center;
+  //   justify-content: space-evenly;
+  // }
+
+  @media screen and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
     max-width: 401px;
