@@ -1,0 +1,142 @@
+.footer-page {
+  @media screen and (max-width: 767px) {
+    min-height: 603px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    min-height: 463px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer {
+  background-color: $footer-color;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+
+  color: $primary-white-color;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.footer .link-footer {
+  display: block;
+  margin-top: 8px;
+  transition: color 250ms $timing-function;
+
+  color: $paragraph-text-color;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.join-us {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footer-form {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+
+.join-email {
+  width: 358px;
+  padding: 15px;
+  background-color: $footer-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: $join-email-color;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.25;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
+
+  &:focus {
+    color: $primary-white-color;
+  }
+}
+
+.tablet-address-socials {
+  @media screen and (min-width: 480px) {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+}
+
+.send-icon {
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+.footer-page .join {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: $primary-white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.email-input {
+  padding: 0;
+  display: inline-flex;
+}

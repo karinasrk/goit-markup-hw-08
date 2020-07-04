@@ -1,0 +1,50 @@
+.logo {
+  color: $logo-color;
+  text-decoration: none;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 80px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.logo-blue {
+  color: $accent-color;
+}
+
+.footer-page .logo-and-address {
+  padding-top: 60px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 60px;
+    margin-bottom: 28px;
+  }
+}
+
+.footer-page .logo {
+  display: block;
+  margin-bottom: 20px;
+
+  // @media screen and (min-width: 1200px) {
+  //   margin-bottom: 20px;
+  // }
+}
+
+.footer .logo-white {
+  color: $primary-white-color;
+  margin-bottom: 10px;
+}

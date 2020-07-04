@@ -1,0 +1,40 @@
+.projects {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.projects .project-type {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  justify-content: center;
+
+  color: $primary-white-color;
+  background-color: $bgc-projects-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projects-info {
+  position: relative;
+}
+
+.projects-list {
+  @extend %list;
+  display: flex;
+}
+
+.projects-list .projects-item:not(:last-child) {
+  margin-right: 30px;
+}

@@ -1,0 +1,210 @@
+.modal {
+  transition: transform 250ms $timing-function;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: $modal-bgc-color;
+  padding: 40px;
+
+  @media screen and (min-width: 480px) {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
+
+  background-color: $backdrop-bgc-color;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding: 93px 15px 94px 15px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 208px 59px 207px 59px;
+  }
+
+  z-index: 999;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-height: 120px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  color: $paragraph-text-color;
+
+  transition: transform 250ms $timing-function;
+
+  .form-input:focus + &,
+  .form-input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(-25px, -45px);
+  }
+}
+
+.form-input {
+  margin: 0;
+  padding: 12px 42px;
+  border: 1px solid $form-input-border-color;
+  border-radius: 4px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  &:focus {
+    outline-color: $accent-color;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  display: inline-block;
+
+  .form-input:focus ~ & {
+    fill: var(--accent-color);
+  }
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid $form-input-border-color;
+  border-radius: 4px;
+
+  &:focus {
+    outline-color: $accent-color;
+  }
+}
+
+.textarea:focus + .textarea-label,
+.textarea:not(:placeholder-shown) + .textarea-label {
+  color: $accent-color;
+  transform: translateY(-30px);
+}
+
+.textarea-label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  padding-top: 12px;
+
+  transition: transform 250ms $timing-function;
+
+  color: $paragraph-text-color;
+
+  .textarea:focus + &,
+  .textarea:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translateY(-30px);
+  }
+}
+
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 6px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid $primary-text-color;
+  border-radius: 2px;
+
+  .checkbox:checked + & {
+    background-color: $accent-color;
+    background-image: url(../images/iconcheck.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-color);
+  }
+}
+
+.policy-content {
+  display: flex;
+  color: $paragraph-text-color;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+    max-width: 401px;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: center;
+  }
+}
+
+.accept-link {
+  color: $accent-color;
+}
+
+.submit-field {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
